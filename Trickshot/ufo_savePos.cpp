@@ -15,13 +15,13 @@ angles.push_back([0,0,0]);
 savedpos.push_back(0);
 onSpect.push_back(0);
 }
-level.onPlayer("connected", onPlayerConnected);
+level.onNotify("connected", onPlayerConnected);
 
 def onPlayerConnected(args){
 	var player = args[0];
 	var pNum = player.getEntityNumber();
 	player.AllowSpectateTeam("freelook", true); //Allow fly on spectator team
-	player.onNotify("menuresponse", fun[player, pNum](arguments) { //Made by DoktorSAS
+	player.onNotify("menuresponse", fun[player, pNum](args) { //Made by DoktorSAS
             if(arguments[0] == "changeclass"){ //Menu response on changeclass
                 //arguments[1] = class selected
             }else if(arguments[0] == "team_marinesopfor"){ //Menu response on team change
