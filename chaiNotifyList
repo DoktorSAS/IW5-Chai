@@ -1,0 +1,11 @@
+Level:
+level.onNotify("connected", ... ) //When player connect
+player:
+player.onNotify("spawned_player", ... ) //When player spawn in
+player.onNotify("killed_enemy", ...) //When player kill somone else
+player.onNotify("damage", ...) //When player take damage
+player.onNotify("death", ...) //When player die
+player.onNotify("weapon_fired", ...) //When player shoot
+player.onNotify("disconnect", ...) //When player disconnect
+player.onNotify("weapon_change", ...) //When player switch weapon
+player.onNotify("menuresponse", ... ) //when player use default menu(open, change class, change team, ...) 
